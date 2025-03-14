@@ -26,5 +26,6 @@ b2 and b3 are collectively called a group, groups are inserted in reverse order 
 ![knuth's formula](https://github.com/ihiiro/Merge-Insertion/blob/master/formula.png "knuth's formula")
 ### M -> S mapping
 M is the main chain array while S is the sorted sequence, in the beginning of a recursive depth M and S are equivalent, but insertion into S destroys the equivalence. To keep this equivalence, a tracker variable p is used for each element, if insertion happened before the element, its p is incremented by 1 in M, and this p is added to the original index of the element in M to find its current index in S.
-This is necessary so that binary search happens up to but not including the pair mate.
+This is necessary so that binary search happens up to but not including the pair mate, and we achieve that by passing the correct END index to the binary search procedure (to obtain END we will need to know the real index of the group member from M in S and subtract one from it).
+
 ![M->S mapping](https://github.com/ihiiro/Merge-Insertion/blob/master/mapping.png "M->S mapping")
