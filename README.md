@@ -25,5 +25,6 @@ b2 and b3 are collectively called a group, groups are inserted in reverse order 
 [Knuth](https://warwick.ac.uk/fac/sci/dcs/teaching/material-archive/cs341/fj.pdf "Knuth") found a formula which takes the current group k and outputs the main chain start index, inserting an element from group k into S will require at most k comparisons, provided insertion starts at index Tk in the main chain and continues backwards toward the group's end.
 ![knuth's formula](https://github.com/ihiiro/Merge-Insertion/blob/master/formula.png "knuth's formula")
 ### M -> S mapping
-M is the main chain array, while S is the sorted sequence, in the beginning M and S are equivalent, but insertion into S destroys the equivalence. To keep this equivalence, a tracker variable p is used for each element, if insertion happened before the element, its p is incremented by 1, and this p is added to the original index of the element in M, to find its current index in S.
+M is the main chain array while S is the sorted sequence, in the beginning M and S are equivalent, but insertion into S destroys the equivalence. To keep this equivalence, a tracker variable p is used for each element, if insertion happened before the element, its p is incremented by 1 in M, and this p is added to the original index of the element in M, to find its current index in S.
+This is necessary so that binary search happens up to but not including "an".
 ![M->S mapping](https://github.com/ihiiro/Merge-Insertion/blob/master/mapping.png "M->S mapping")
