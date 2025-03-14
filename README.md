@@ -19,7 +19,7 @@ We use the observation above to minimize the number of comparisons needed for ea
 Left to right insertion gives us C ( 2 ) + C ( 4 ) = 2 + 3 = 5
 ![wrong insertion](https://github.com/ihiiro/Merge-Insertion/blob/master/wrong_insertion.png "wrong insertion")
 We can make C ( n ) the same for both b2 and b3, because
-C ( 3 ) <==> C ( 3 ).
+C ( 2 ) <==> C ( 3 ).
 b2 and b3 are collectively called a group, groups are inserted in reverse order so that C ( n ) is uniform across the entire group.
 ![correct insertion](https://github.com/ihiiro/Merge-Insertion/blob/master/correct_insertion.png "correct insertion")
 [Knuth](https://warwick.ac.uk/fac/sci/dcs/teaching/material-archive/cs341/fj.pdf "Knuth") found a formula which takes the current group k and outputs the main chain start index, inserting an element from group k into S will require at most k comparisons, provided insertion starts at index Tk in the main chain and continues backwards toward the group's end.
