@@ -15,7 +15,7 @@ We have the relation
 (insert binary-search relation pic)
 ### Insertion ordering
 We use the observation above to minimize the number of comparisons needed for each insertion, consider the configuration
-(insert configuration pic)
+![Wrong insertion](https://github.com/ihiiro/Merge-Insertion/blob/master/configuration.png "Wrong insertion")
 Left to right insertion gives us C ( 2 ) + C ( 4 ) = 2 + 3 = 5
 (insert LTR insertion pic)
 We can make C ( n ) the same for both b2 and b3, because
