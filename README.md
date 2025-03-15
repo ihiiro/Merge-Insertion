@@ -10,7 +10,7 @@
 Each element contains a pointer to another it is paired with, and the length of the pair-chain grows exponentially with powers of two, pair-chain-lookup is a procedure used to look through this pair-chain and find the pairing on any recursive depth. On depth 0 the length is R=1 and on 1 it is 2, 4 on 2 etc.. therefore lookup on a given depth will require R dereferences.
 ![pair chain](https://github.com/ihiiro/Merge-Insertion/blob/master/pair_chain.png "pair chain")
 ### binary insertion
-Let C ( n ) be the function that returns the number of comparisons in the worst case when inserting into a sequence of n elements.
+Let C ( l ) be the function that returns the number of comparisons in the worst case when inserting into a sequence of n elements.
 We have the relation
 ![binary search relation](https://github.com/ihiiro/Merge-Insertion/blob/master/equivalence.png "binary search relation")
 ### Insertion ordering
@@ -18,9 +18,9 @@ We use the observation above to minimize the number of comparisons needed for ea
 ![Configuration](https://github.com/ihiiro/Merge-Insertion/blob/master/configuration.png "configuration")
 Left to right insertion gives us C ( 2 ) + C ( 4 ) = 2 + 3 = 5
 ![wrong insertion](https://github.com/ihiiro/Merge-Insertion/blob/master/wrong_insertion.png "wrong insertion")
-We can make C ( n ) the same for both b2 and b3, because
+We can make C ( l ) the same for both b2 and b3, because
 C ( 2 ) <==> C ( 3 ).
-b2 and b3 are collectively called a group, groups are inserted in reverse order so that C ( n ) is uniform across the entire group.
+b2 and b3 are collectively called a group, groups are inserted in reverse order so that C ( l ) is uniform across the entire group.
 ![correct insertion](https://github.com/ihiiro/Merge-Insertion/blob/master/correct_insertion.png "correct insertion")
 [Knuth](https://warwick.ac.uk/fac/sci/dcs/teaching/material-archive/cs341/fj.pdf "Knuth") found a formula which takes the current group k and outputs the main chain start index, inserting an element from group k into S will require at most k comparisons, provided insertion starts at index Tk in the main chain and continues backwards toward the group's end.
 ![knuth's formula](https://github.com/ihiiro/Merge-Insertion/blob/master/formula.png "knuth's formula")
