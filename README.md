@@ -10,7 +10,7 @@
 Each element contains a pointer to another it is paired with, and the length of the pair-chain grows exponentially with powers of two, pair-chain-lookup is a procedure used to look through this pair-chain and find the pairing on any recursive depth. On depth 0 the length is R=1 and on 1 it is 2, 4 on 2 etc.. therefore lookup on a given depth will require R dereferences.
 ![pair chain](https://github.com/ihiiro/Merge-Insertion/blob/master/pair_chain.png "pair chain")
 ### binary insertion
-Let C ( l ) be the function that returns the number of comparisons in the worst case when inserting into a sequence of n elements.
+Let C ( l ) be the function that returns the number of comparisons in the worst case when inserting into a sequence of l elements.
 We have the relation
 ![binary search relation](https://github.com/ihiiro/Merge-Insertion/blob/master/equivalence.png "binary search relation")
 ### Insertion ordering
