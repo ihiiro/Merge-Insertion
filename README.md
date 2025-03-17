@@ -1,7 +1,7 @@
 # Algorithm
 ##### 1. Arbitrarily group the elements in pairs.
 ##### 2. Perform pairwise compairons, one for each pair and pick the larger element.
-##### 3. Recursively sort the the (n/2) larger elements using merge-insertion.
+##### 3. Recursively sort the (n/2) larger elements using merge-insertion.
 ##### 4. Insert at the start of the sequence S, the element that was paired with the first and smallest element of S.
 ##### 5. Insert the remaining (n/2) - 1 elements using binary search, with a specific ordering described below.
 
